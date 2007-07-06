@@ -1,0 +1,25 @@
+--- naughts_and_crosses-0.83/Makefile.am~	2007-02-28 09:27:30.000000000 +0100
++++ naughts_and_crosses-0.83/Makefile.am	2007-07-06 19:29:38.000000000 +0200
+@@ -3,21 +3,7 @@
+ ## If you don't want it to overwrite it,
+ ## 	Please disable it in the Anjuta project configuration
+ 
+-SUBDIRS = src data doc
+-
+-naughts_and_crossesdocdir = ${prefix}/doc/naughts_and_crosses
+-naughts_and_crossesdoc_DATA = \
+-	README\
+-	COPYING\
+-	AUTHORS\
+-	ChangeLog\
+-	INSTALL\
+-	NEWS\
+-	TODO
+-
+-EXTRA_DIST = $(naughts_and_crossesdoc_DATA)
+-
+-
++SUBDIRS = src data
+ 
+ # Copy all the spec files. Of cource, only one is actually used.
+ dist-hook:
