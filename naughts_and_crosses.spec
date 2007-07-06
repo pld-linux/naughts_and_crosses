@@ -7,6 +7,7 @@ License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://www.jamyskis.net/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	6a49a4c569dd44ec4e43e44ab0b21fd2
+Patch0:		%{name}-useless_files.patch
 URL:		http://www.jamyskis.net/invaders.php
 BuildRequires:	allegro-devel >= 4.2.0
 BuildRequires:	autoconf
@@ -21,6 +22,7 @@ Prosta gra w kółko i krzyżyk.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
