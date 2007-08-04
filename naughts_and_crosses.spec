@@ -4,7 +4,7 @@ Name:		naughts_and_crosses
 Version:	0.83
 Release:	1
 License:	GPL v2+
-Group:		X11/Applications/Games
+Group:		Applications/Games
 Source0:	http://www.jamyskis.net/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	6a49a4c569dd44ec4e43e44ab0b21fd2
 Patch0:		%{name}-useless_files.patch
@@ -12,6 +12,8 @@ URL:		http://www.jamyskis.net/naughts.php
 BuildRequires:	allegro-devel >= 4.2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libstdc++-devel
+BuildRequires:	libtool >= 2:1.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,6 +27,7 @@ Prosta gra w kółko i krzyżyk.
 %patch0 -p1
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
